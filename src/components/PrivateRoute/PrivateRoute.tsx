@@ -1,11 +1,12 @@
 import React, { ReactNode } from 'react';
+
 import { Route } from 'react-router';
 
 interface IProps {
-	children: ReactNode;
+	element: ReactNode;
 	path: string;
 }
 
-export const PrivateRoute = ({ children, path }: IProps) => {
-	return <Route path={path} element={children} />;
+export const PrivateRoute = ({ element, path }: IProps) => {
+	return <Route path={path} element={element} />;
 };
