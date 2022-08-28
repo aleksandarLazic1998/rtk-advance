@@ -1,5 +1,5 @@
-import axios from "axios";
-import handleInterceptorErrors from "./handleInterceptorErrors";
+import axios from 'axios';
+import handleInterceptorErrors from './handleInterceptorErrors';
 
 const httpClient = axios.create({ baseURL: process.env.REACT_APP_API_URL });
 
@@ -17,7 +17,7 @@ httpClient.interceptors.response.use(
 
 		const isRequestRetryFailed =
 			error.response.status === 401 &&
-			originalRequest.url === "http://127.0.0.1:3000/v1/auth/token";
+			originalRequest.url === 'http://127.0.0.1:3000/v1/auth/token';
 
 		if (isRequestRetryFailed) return handleInterceptorErrors(error);
 
