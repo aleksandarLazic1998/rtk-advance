@@ -26,7 +26,6 @@ httpClient.interceptors.response.use(
 
 		if (isRequestFailed) {
 			originalRequest._retry = true;
-
 			// Todo: Send Request For Refresh Token
 		}
 
