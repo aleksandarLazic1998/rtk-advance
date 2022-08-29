@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react';
-import { Route } from 'react-router';
+
+import { AppLayout } from '../../layout/AppLayout/AppLayout';
 
 interface IProps {
 	children: ReactNode;
-	path: string;
 }
 
-export const PrivateRoute = ({ children, path }: IProps) => {
-	return <Route path={path} element={children} />;
+export const PrivateRoute = ({ children }: IProps) => {
+	return <AppLayout>{children}</AppLayout>;
 };
