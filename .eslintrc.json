@@ -48,6 +48,7 @@
 		"no-param-reassign": "off",
 		"import/prefer-default-export": "off",
 		"implicit-arrow-linebreak": "off",
+		"react/jsx-indent-props": "off",
 		"arrow-body-style": "off",
 		"react/button-has-type": "off",
 		"no-unneeded-ternary": "off",
