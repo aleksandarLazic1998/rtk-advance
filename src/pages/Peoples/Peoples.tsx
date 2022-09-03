@@ -2,17 +2,19 @@ import React from 'react';
 
 import { useGetPeople } from '../../services/peopleApiSlice';
 import { useGlobalState } from '../../store/hooks';
-import { peoplesSelector } from '../../store/store';
+import { getListOfEntityAdapterObject } from '../../utils/helpers/getListOfEntityAdapterObject';
 
 export const Peoples = () => {
 	useGetPeople({});
 
-	const listOfPeoples = useGlobalState(peoplesSelector.selectAll);
+	const { peoples } = useGlobalState((state) => state.people);
+
+	const listOfPeoples = getListOfEntityAdapterObject(peoples);
 
 	return (
 		<h1>
 			{listOfPeoples.map((person) => (
-				<p key={person.id}>{person.name}</p>
+				<p key={person?.id}>{person?.name}</p>
 			))}
 		</h1>
 	);
