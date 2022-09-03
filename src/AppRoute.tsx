@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import ErrorBoundary from './components/ErrorBoundaries/ErrorBoundaries';
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
-import { Dashboard } from './pages/Dashboard/Dashboard';
+import { Peoples } from './pages/Peoples/Peoples';
 
 export function AppRoute() {
 	return (
@@ -15,7 +15,7 @@ export function AppRoute() {
 						path="/"
 						element={
 							<PrivateRoute>
-								<Dashboard />
+								<Peoples />
 							</PrivateRoute>
 						}
 					/>

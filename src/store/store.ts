@@ -1,10 +1,12 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 
-import { AppSlice } from './slices';
+import { apiSlice } from '../services/rootApiSliceService';
+import { rootReducer } from './rootReducer';
 
 export const store = configureStore({
-	reducer: {
-		app: AppSlice.reducer,
+	reducer: rootReducer,
+	middleware: (getDefaultMiddleware) => {
+		return getDefaultMiddleware().concat(apiSlice.middleware);
 	},
 });
 
