@@ -1,12 +1,12 @@
-import { apiSlice } from './rootApiSliceService';
+import { apiSlice } from './rootApiSlice';
 
-export const peopleApi = apiSlice.injectEndpoints({
+export const peopleApiSlice = apiSlice.injectEndpoints({
 	endpoints: (builder) => ({
 		getPeople: builder.query({
-			query: () => '/people',
+			query: () => '/character',
 		}),
 	}),
 });
 
 /* Fetch Hooks */
-export const useGetPeople = peopleApi.endpoints.getPeople.useQuery;
+export const useGetPeople = peopleApiSlice.endpoints.getPeople.useQuery;

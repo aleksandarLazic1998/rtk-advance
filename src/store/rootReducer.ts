@@ -1,4 +1,4 @@
-import { apiSlice } from '../services/rootApiSliceService';
+import { apiSlice } from '../services/rootApiSlice';
 import { AppSlice, PeopleSlice } from './slices';
 
 export const rootReducer = {
