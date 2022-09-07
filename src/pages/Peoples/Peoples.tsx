@@ -3,6 +3,8 @@ import React from 'react';
 import { useGetPeople } from '../../services/peopleApiSlice';
 import { useGlobalState } from '../../store/hooks';
 import { getListOfEntityAdapterObject } from '../../utils/helpers/getListOfEntityAdapterObject';
+import { SinglePerson } from './SinglePerson';
+import './Peoples.css';
 
 export const Peoples = () => {
 	useGetPeople({});
@@ -12,10 +14,10 @@ export const Peoples = () => {
 	const listOfPeoples = getListOfEntityAdapterObject(peoples);
 
 	return (
-		<h1>
+		<div className="characters">
 			{listOfPeoples.map((person) => (
-				<p key={person?.id}>{person?.name}</p>
+				<SinglePerson key={person?.id} person={person} />
 			))}
-		</h1>
+		</div>
 	);
 };
