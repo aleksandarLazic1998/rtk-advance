@@ -1,0 +1,11 @@
+.sidebar {
+	@apply w-9 bg-gray-500;
+}
+
+.sidebar--open {
+	@apply w-1/5;
+}
+
+.sidebar__nav-links {
+	@apply m-2;
+}
