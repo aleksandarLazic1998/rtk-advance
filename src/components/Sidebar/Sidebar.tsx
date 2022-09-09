@@ -10,9 +10,16 @@ export const Sidebar = () => {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
 	return (
-		<div className={`sidebar ${isSidebarOpen ? 'sidebar--open' : ''}`}>
-			<button onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+		<div
+			data-testid="sidebar"
+			className={`sidebar ${isSidebarOpen ? 'sidebar--open' : ''}`}
+		>
+			<button
+				data-testid="sidebar-toggler"
+				onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+			>
 				<SvgIcon
+					data-testid="sidebar-icon"
 					component={isSidebarOpen ? ArrowBackIosIcon : ArrowForwardIosIcon}
 					inheritViewBox
 				/>
