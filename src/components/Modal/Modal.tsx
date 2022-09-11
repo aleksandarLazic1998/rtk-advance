@@ -14,6 +14,7 @@ export const Modal = () => {
 	return (
 		<ErrorBoundary>
 			<ReactModal
+				data-testId="modal"
 				ariaHideApp={false}
 				isOpen={isModalOpen}
 				shouldCloseOnOverlayClick

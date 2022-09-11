@@ -1,9 +1,9 @@
 import React from 'react';
 
+import { Dashboard } from 'pages/pageRoutes';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
-import { Peoples } from './pages/Peoples/Peoples';
 
 export function AppRoute() {
 	return (
@@ -13,7 +13,7 @@ export function AppRoute() {
 					path="/"
 					element={
 						<PrivateRoute>
-							<Peoples />
+							<Dashboard />
 						</PrivateRoute>
 					}
 				/>

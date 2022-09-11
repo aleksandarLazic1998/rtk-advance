@@ -1,3 +1,7 @@
 .app-layout {
-	@apply bg-slate-800 my-0 mx-auto flex;
+	@apply bg-slate-800 my-0 mx-auto flex h-screen w-screen;
+}
+
+.main-component {
+	@apply h-full w-full;
 }
