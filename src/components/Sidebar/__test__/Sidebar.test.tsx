@@ -1,18 +1,15 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import { TestComponent } from 'test/TestComponent';
+import { renderWithProviders } from 'test/TestComponent';
 
 import { Sidebar } from '../Sidebar';
 
 beforeEach(() => {
-	render(
-		<TestComponent>
-			<Sidebar />
-		</TestComponent>
-	);
+	renderWithProviders(<Sidebar />);
 });
 
 test('It should render sidebar', () => {
 	const SidebarComponent = screen.getByTestId('sidebar');
+
 	expect(SidebarComponent).toBeVisible();
 });
