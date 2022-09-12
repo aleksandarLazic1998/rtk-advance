@@ -41,6 +41,7 @@
 		"project": "./tsconfig.json"
 	},
 	"rules": {
+		"testing-library/no-render-in-setup": "off",
 		"react/jsx-wrap-multilines": "off",
 		"@typescript-eslint/object-curly-spacing": "off",
 		"react/no-danger": "off",

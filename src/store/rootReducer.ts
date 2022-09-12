@@ -1,8 +1,11 @@
-import { apiSlice } from '../services/rootApiSlice';
-import { AppSlice, PeopleSlice } from './slices';
+import { combineReducers } from '@reduxjs/toolkit';
 
-export const rootReducer = {
+import { apiSlice } from '../services/rootApiSlice';
+import { AppSlice } from './slices';
+
+export const reducers = {
 	[apiSlice.reducerPath]: apiSlice.reducer,
 	app: AppSlice.reducer,
-	people: PeopleSlice.reducer,
 };
+
+export const rootReducer = combineReducers(reducers);

@@ -1,16 +1,14 @@
 import React from 'react';
 
+import ErrorBoundary from 'components/ErrorBoundaries/ErrorBoundaries';
+
 import { AppRoute } from './AppRoute';
-import { Message } from './components/Message/Message';
-import { Modal } from './components/Modal/Modal';
 
 function App() {
 	return (
-		<>
-			<Modal />
+		<ErrorBoundary>
 			<AppRoute />
-			<Message />
-		</>
+		</ErrorBoundary>
 	);
 }
 

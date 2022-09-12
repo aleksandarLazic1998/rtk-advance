@@ -7,8 +7,7 @@ export const apiSlice = createApi({
 	baseQuery: fetchBaseQuery({
 		baseUrl: process.env.REACT_APP_API_URL,
 		prepareHeaders: (headers) => {
-			headers.set('Access-Control-Allow-Origin', '*');
-			/* Set Headers Token */
+			headers.append('Content-Type', 'application/json');
 			return headers;
 		},
 	}),

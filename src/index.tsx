@@ -2,10 +2,11 @@ import React from 'react';
 
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
+import { setupStore } from 'store/store';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { store } from './store/store';
+
 import './index.css';
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -13,7 +14,7 @@ const root = createRoot(document.getElementById('root')!);
 
 root.render(
 	<React.StrictMode>
-		<Provider store={store}>
+		<Provider store={setupStore()}>
 			<App />
 		</Provider>
 	</React.StrictMode>

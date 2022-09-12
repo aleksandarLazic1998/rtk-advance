@@ -1,3 +1,3 @@
-import { store } from '../../store/store';
+import { AppStore } from './AppStore';
 
-export type AppDispatch = typeof store.dispatch;
+export type AppDispatch = AppStore['dispatch'];
