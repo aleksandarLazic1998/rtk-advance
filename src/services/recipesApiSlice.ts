@@ -9,7 +9,7 @@ export const recipesApiSlice = apiSlice.injectEndpoints({
 		getRandomRecipes: builder.query<IRecipe[], IRecipeDTO>({
 			query: (dto) => {
 				return queryBuilder({
-					baseQuery: 'recipes/rando',
+					baseQuery: 'recipes/random',
 					queryObject: { number: dto.number },
 				});
 			},
