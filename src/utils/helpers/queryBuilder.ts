@@ -12,6 +12,7 @@ export const queryBuilder = ({ baseQuery, queryObject }: IProps) => {
 			query.append(key, String(value));
 		});
 	}
+
 	if (process.env.REACT_APP_API_KEY) {
 		query.append('apiKey', process.env.REACT_APP_API_KEY);
 	}

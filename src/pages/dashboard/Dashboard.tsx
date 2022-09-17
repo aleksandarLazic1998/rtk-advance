@@ -2,8 +2,14 @@ import React from 'react';
 
 import { useGetRandomRecipes } from 'services/recipesApiSlice';
 
+import { RecipesList } from './RecipesList/RecipesList';
+
 export const Dashboard = () => {
 	useGetRandomRecipes({ number: 10 });
 
-	return <div>Dashboard</div>;
+	return (
+		<div>
+			<RecipesList />
+		</div>
+	);
 };

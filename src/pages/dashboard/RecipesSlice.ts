@@ -24,7 +24,7 @@ export const RecipesSlice = createSlice({
 		builder.addMatcher(
 			recipesApiSlice.endpoints.getRandomRecipes.matchFulfilled,
 			(state, action) => {
-				state.recipes = action.payload;
+				state.recipes = action.payload.recipes;
 			}
 		);
 	},

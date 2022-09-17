@@ -1,1 +1,3 @@
-export type IResponse = unknown;
+export interface IResponse<T> {
+	recipes: T;
+}
