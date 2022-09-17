@@ -18,4 +18,17 @@ describe('Should display all logic for recipes list', () => {
 		const element = screen.getAllByTestId('recipe');
 		expect(element).toHaveLength(2);
 	});
+
+	test('Should display zero state', () => {
+		renderWithProviders(<RecipesList />, {
+			preloadedState: {
+				recipe: {
+					recipes: [],
+				},
+			},
+		});
+
+		const element = screen.getByText(/There are no recipes yet.../i);
+		expect(element).toBeVisible();
+	});
 });

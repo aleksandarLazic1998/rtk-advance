@@ -4,10 +4,11 @@ import { useGlobalState } from 'store/hooks';
 
 export const RecipesList = () => {
 	const { recipes } = useGlobalState((state) => state.recipe);
+	const isListEmpty = recipes.length === 0;
 
 	return (
 		<div>
-			{recipes.length > 0 && (
+			{!isListEmpty ? (
 				<div>
 					{recipes.map((recipe) => {
 						return (
@@ -17,6 +18,8 @@ export const RecipesList = () => {
 						);
 					})}
 				</div>
+			) : (
+				<p>There are no recipes yet...</p>
 			)}
 		</div>
 	);
