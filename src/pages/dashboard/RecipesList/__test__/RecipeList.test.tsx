@@ -8,11 +8,7 @@ import { RecipesList } from '../RecipesList';
 describe('Should display all logic for recipes list', () => {
 	test('Should display list of random recipes', () => {
 		renderWithProviders(<RecipesList />, {
-			preloadedState: {
-				recipe: {
-					recipes: MockRecipeList,
-				},
-			},
+			preloadedState: { recipe: { recipes: MockRecipeList } },
 		});
 
 		const element = screen.getAllByTestId('recipe');
@@ -21,11 +17,7 @@ describe('Should display all logic for recipes list', () => {
 
 	test('Should display zero state', () => {
 		renderWithProviders(<RecipesList />, {
-			preloadedState: {
-				recipe: {
-					recipes: [],
-				},
-			},
+			preloadedState: { recipe: { recipes: [] } },
 		});
 
 		const element = screen.getByText(/There are no recipes yet.../i);
