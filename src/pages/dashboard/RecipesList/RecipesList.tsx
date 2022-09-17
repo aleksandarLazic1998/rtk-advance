@@ -7,13 +7,17 @@ export const RecipesList = () => {
 
 	return (
 		<div>
-			{recipes.map((recipe) => {
-				return (
-					<p data-testid="recipe" key={recipe.id}>
-						{recipe.title}
-					</p>
-				);
-			})}
+			{recipes.length > 0 && (
+				<div>
+					{recipes.map((recipe) => {
+						return (
+							<p data-testid="recipe" key={recipe.id}>
+								{recipe.title}
+							</p>
+						);
+					})}
+				</div>
+			)}
 		</div>
 	);
 };

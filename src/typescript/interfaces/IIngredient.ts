@@ -9,7 +9,7 @@ export interface IIngredient {
 	nameClean: string;
 	original: string;
 	originalName: string;
-	amount: 2;
+	amount: number;
 	unit: string;
 	meta: string[];
 	measures: {
