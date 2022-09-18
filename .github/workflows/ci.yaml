@@ -8,9 +8,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        
         uses: actions/setup-node@v3
-        - run: node -v
 
       - name: Install Packages
         - run: npm ci
