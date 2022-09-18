@@ -26,3 +26,6 @@ jobs:
 
       - name: Run Testing
         run: npm run test
+- run: npm install && npm install -g @lhci/cli@0.8.x
+      - run: npm run build
+      - run: lhci autorun

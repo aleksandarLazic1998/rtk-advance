@@ -1,3 +1,5 @@
 tailwind.config.js
 postcss.config.js
 setupTest.ts
+lighthouserc.js
+
