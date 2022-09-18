@@ -34,7 +34,8 @@
 		"eject": "react-scripts eject",
 		"lint": "eslint . --fix --max-warnings=0",
 		"format": "prettier . --write",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"lighthouse": "lhci autorun"
 	},
 	"eslintConfig": {
 		"extends": [
