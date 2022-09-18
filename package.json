@@ -34,7 +34,8 @@
 		"eject": "react-scripts eject",
 		"lint": "eslint . --fix --max-warnings=0",
 		"format": "prettier . --write",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"lighthouse": "lhci autorun"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -55,6 +56,7 @@
 		]
 	},
 	"devDependencies": {
+		"@lhci/cli": "^0.9.0",
 		"@types/lodash": "^4.14.185",
 		"@types/react-modal": "^3.13.1",
 		"@typescript-eslint/eslint-plugin": "^5.37.0",
