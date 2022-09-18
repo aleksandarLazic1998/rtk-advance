@@ -1,6 +1,6 @@
 # Recipe App
 
-This project was made to explore Redux-Toolkit with RTKQuery and Taiwind fundamentals and logi.
+This project was made to explore Redux-Toolkit with RTKQuery and Taiwind fundamentals and logic.
 
 ## To start the project follow steps undreneath:
 
