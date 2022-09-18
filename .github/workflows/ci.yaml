@@ -7,7 +7,9 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
 
       - name: Cache dependencies
         uses: actions/cache@v3
@@ -21,3 +23,6 @@ jobs:
 
       - name: Run Linter
         run: npm run lint
+
+      - name: Run Testing
+        run: npm run test
