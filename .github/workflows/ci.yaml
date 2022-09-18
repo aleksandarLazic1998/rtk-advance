@@ -28,4 +28,4 @@ jobs:
         run: npm run test
 
       - name: Run Lighthouse
-        run: npm install -g @lhci/cli@0.8.x && build && npm run lighthouse
+        run: build && npm run lighthouse
