@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { Bars4Icon } from '@heroicons/react/24/solid';
 import './Sidebar.css';
-import { SvgIcon } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 
 export const Sidebar = () => {
@@ -18,11 +16,7 @@ export const Sidebar = () => {
 				data-testid="sidebar-toggler"
 				onClick={() => setIsSidebarOpen(!isSidebarOpen)}
 			>
-				<SvgIcon
-					data-testid="sidebar-icon"
-					component={isSidebarOpen ? ArrowBackIosIcon : ArrowForwardIosIcon}
-					inheritViewBox
-				/>
+				<Bars4Icon className="h-6 w-6 text-blue-500" />
 				{isSidebarOpen && (
 					<div className="sidebar__nav-links">
 						<NavLink to="/" onClick={(e) => e.stopPropagation()}>

@@ -1,4 +1,4 @@
-const BASE_URL = process.env.BASE_URL;
+const { BASE_URL } = process.env;
 
 const Routes = {
 	BASE: BASE_URL,
