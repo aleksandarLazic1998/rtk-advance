@@ -33,7 +33,7 @@
 		"lint": "eslint . --fix --max-warnings=0",
 		"format": "prettier . --write",
 		"prepare": "husky install",
-		"husky": "cross-env CI=true npm run lint && npm run test q"
+		"husky": "cross-env CI = true react-scripts test"
 	},
 	"eslintConfig": {
 		"extends": [
